@@ -58,9 +58,7 @@ class Obtener():
                   print ("-> Palabra no Aceptada, NOOOOO es PALINDROMO!!!!")
 
               # iniciamos el PYGAME
-              print("NOJODAAAAAAAAAAAA",aux.devolverEstados())
-              print("Diossssssss",aux.devolverPila())
-
+              
 
 
               def load_image(filename, transparent=False):
@@ -255,10 +253,7 @@ class Obtener():
                       screen.blit(errorFalse, (xFalse,yFalse))
 
                       pygame.display.update()
-
-
-
-                      pygame.display.flip()
+		      pygame.display.flip()
                       i=i+1
                   return 0
               pygame.init()
