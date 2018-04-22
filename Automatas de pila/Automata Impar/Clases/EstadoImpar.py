@@ -1,13 +1,12 @@
 import Automata
 import sys
-class Estados():
+class EstadosImpar():
     def __init__(self,cadena,pila,error,guardar):
         self.cadena=cadena
         self.pila=pila
         self.error=error
         self.guardar=guardar
         self.estadopila=""
-
     def retorno(self):
         if self.error==True:
             return True
@@ -31,10 +30,10 @@ class Estados():
     def estado1(self,pila):
 
         self.error=True
-
+        self.guardar.addEstado("#")
         for i in range(len(self.cadena)):
-            print("esto es i =",i)
             if self.cadena[i]=="a":
+                print(self.pila.tope(),self.cadena[i])
                 if self.pila.tope()=="#":
                     self.pila.desapilar()
                     self.pila.apilar("#")
@@ -54,15 +53,17 @@ class Estados():
                     self.pila.apilar("a")
                     self.guardar.addEstado("e")
 
-                print("---------------------------")
+
                 print("la pila",self.pila.mostrar())
                 self.estadopila=" ".join(self.pila.mostrar())
                 self.guardar.addPila(self.estadopila)
-                print("Como va la Pila que le agrega o quita",self.guardar.mostrarPila())
-                print("Identificacion para mostrar las reglas",self.guardar.mostrarEstado())
-                print("---------------------------")
+                print("Estado de la pila",self.guardar.mostrarPila())
+                print("estadooooo",self.guardar.mostrarEstado())
+
+                """print("mieruirhi",jota)"""
 
             if self.cadena[i]=="b":
+
                 if self.pila.tope()=="#":
                     self.pila.desapilar()
                     self.pila.apilar("#")
@@ -81,13 +82,13 @@ class Estados():
                     self.pila.apilar("b")
                     self.guardar.addEstado("f")
 
-                print("---------------------------")
-                print("la pila",self.pila.mostrar())
+
+                print("BBBBBBBBBBBBBBBB","la pila",self.pila.mostrar())
                 self.estadopila=" ".join(self.pila.mostrar())
                 self.guardar.addPila(self.estadopila)
-                print("Como va la Pila que le agrega o quita",self.guardar.mostrarPila())
-                print("Identificacion para mostrar las reglas",self.guardar.mostrarEstado())
-                print("---------------------------")
+                print("Estado de la pila",self.guardar.mostrarPila())
+                print("estadooooo",self.guardar.mostrarEstado())
+
             c=self.cadena.count("c")
 
             if self.cadena[i] == "c":
@@ -115,17 +116,18 @@ class Estados():
                         self.pila.apilar("b")
                         self.guardar.addEstado("h")
 
-                    print("---------------------------")
-                    print("la pila",self.pila.mostrar())
+                    print("CCCCCCCCCCCCCCC","la pila",self.pila.mostrar())
                     self.estadopila=" ".join(self.pila.mostrar())
                     self.guardar.addPila(self.estadopila)
-                    print("Como va la Pila que le agrega o quita",self.guardar.mostrarPila())
-                    print("Identificacion para mostrar las reglas",self.guardar.mostrarEstado())
-                    print("---------------------------")
+                    print("Estado de la pila",self.guardar.mostrarPila())
+                    print("estadooooo",self.guardar.mostrarEstado())
 
+                    print("la pila",self.pila.mostrar())
                     while(j < 2*despuesC-1):
-                        print("esto es j",j)
+                        print("despues",j)
+                        print(self.cadena[j])
                         self.error=self.estado2(self.cadena[j])
+                        #print(self.error)
                         if self.error==False:
                             break
                         else:
@@ -158,14 +160,13 @@ class Estados():
 
             if self.pila.tope()=="a":
                 self.pila.desapilar()
-                self.guardar.addEstado("k")
-                print("---------------------------")
                 print("la pila",self.pila.mostrar())
+                self.guardar.addEstado("k")
                 self.estadopila=" ".join(self.pila.mostrar())
                 self.guardar.addPila(self.estadopila)
-                print("Como va la Pila que le agrega o quita",self.guardar.mostrarPila())
-                print("Identificacion para mostrar las reglas",self.guardar.mostrarEstado())
-                print("---------------------------")
+                print("Estado de la pila",self.guardar.mostrarPila())
+                print("estadooooo",self.guardar.mostrarEstado())
+
             else:
 
                 print("palabra no es aceptada, por lo tanto no es palindroma",cadena)
@@ -175,14 +176,13 @@ class Estados():
 
             if self.pila.tope()=="b":
                 self.pila.desapilar()
-                self.guardar.addEstado("j")
-                print("---------------------------")
                 print("la pila",self.pila.mostrar())
+                self.guardar.addEstado("j")
                 self.estadopila=" ".join(self.pila.mostrar())
                 self.guardar.addPila(self.estadopila)
-                print("Como va la Pila que le agrega o quita",self.guardar.mostrarPila())
-                print("Identificacion para mostrar las reglas",self.guardar.mostrarEstado())
-                print("---------------------------")
+                print("Estado de la pila",self.guardar.mostrarPila())
+                print("estadooooo",self.guardar.mostrarEstado())
+
             else:
 
                 print("palabra no es aceptada, por lo tanto no es palindroma",cadena)
