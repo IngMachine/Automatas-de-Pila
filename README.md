@@ -1,1 +1,1 @@
-# Automata de Pila (PAR E IMPAR)
+# Automatad de Pila (PAR E IMPAR)
