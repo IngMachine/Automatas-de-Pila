@@ -1,7 +1,7 @@
 from Tkinter import *
 from Clases import Automata
 from Clases import Entrada
-from Clases import Estado
+from Clases import EstadoImpar
 import sys
 error=True
 
