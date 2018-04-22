@@ -58,7 +58,7 @@ class Obtener():
                   print ("-> Palabra no Aceptada, NOOOOO es PALINDROMO!!!!")
 
               # iniciamos el PYGAME
-              
+
 
 
               def load_image(filename, transparent=False):
@@ -91,7 +91,7 @@ class Obtener():
                   screen = pygame.display.set_mode((WIDTH, HEIGHT))
                   pygame.display.set_caption("<-- PALINDROMO PAR --")
 
-                  background_image = load_image('/home/ricaardo/Documentos/COMPILADORES/automata impar/img/impar.png')
+                  background_image = load_image('img/impar.png')
 
                   #imagenes
                   errorTrue = pygame.image.load("img/ERRROR_TRUE.png")
