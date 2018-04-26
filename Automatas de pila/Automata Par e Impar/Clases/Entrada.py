@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # Módulos
+from subprocess import check_output
 import sys, pygame
 from pygame.locals import *
 import Automata
@@ -21,6 +22,7 @@ class Obtener():
     def validacion(self):
           if len(self.cadena)%2==0:
               print("Es par")
+              speak=check_output(['espeak',' apila'])
               p=Automata.Pila()
               p.apilar("#")
               guardar=Lista.Listas()
