@@ -81,7 +81,7 @@ class Obtener():
                   screen = pygame.display.set_mode((WIDTH, HEIGHT))
                   pygame.display.set_caption("<-- PALINDROMO PAR --")
 
-                  background_image = load_image('/home/ricaardo/Documentos/COMPILADORES/automata par/img/Par.png')
+                  background_image = load_image("img/Par.png")
 
                   #imagenes
                   errorTrue = pygame.image.load("img/ERRROR_TRUE.png")
@@ -330,9 +330,9 @@ class Obtener():
 
                   reloj = pygame.time.Clock()
                   screen = pygame.display.set_mode((WIDTH, HEIGHT))
-                  pygame.display.set_caption("<-- PALINDROMO PAR --")
+                  pygame.display.set_caption("<-- PALINDROMO IMPAR --")
 
-                  background_image = load_image('/home/ricaardo/Documentos/COMPILADORES/automata impar/img/impar.png')
+                  background_image = load_image("img/impar.png")
 
                   #imagenes
                   errorTrue = pygame.image.load("img/ERRROR_TRUE.png")
