@@ -22,9 +22,9 @@ class Obtener():
     def validacion(self):
           if len(self.cadena)%2==0:
               print("Es par")
-              speak=check_output(['espeak',' apila'])
               p=Automata.Pila()
               p.apilar("#")
+              speak=check_output(['espeak','apilar vacio'])
               guardar=Lista.Listas()
               guardar.addPila("#")
               print("la pila",p.mostrar())
@@ -143,6 +143,8 @@ class Obtener():
                           #apila
                           xapi=574
                           yapi=72
+                          speak=check_output(['espeak','quita de la pila b'])
+                          speak=check_output(['espeak','apilar b y b'])
 
 
                       if listaEstado[i] == "e":    #2 a,b/ba -> desaapila b apila ba
@@ -154,6 +156,8 @@ class Obtener():
                           #apila
                           xapi=574
                           yapi=72
+                          speak=check_output(['espeak','quita de la pila b'])
+                          speak=check_output(['espeak','apilar b y a'])
 
                       if listaEstado[i] == "d":    #3 b,a/ab ->desaapila a apila ab
                           xFlecha=154
@@ -164,6 +168,8 @@ class Obtener():
                           #apila
                           xapi=574
                           yapi=72
+                          speak=check_output(['espeak','quita de la pila b'])
+                          speak=check_output(['espeak','apilar a y b'])
                       if listaEstado[i] == "c":    #4 a,a/aa ->desapila a y apila aa
                           xFlecha=154
                           yFlecha=211
@@ -173,6 +179,8 @@ class Obtener():
                           #apila
                           xapi=574
                           yapi=72
+                          speak=check_output(['espeak','quita de la pila a'])
+                          speak=check_output(['espeak','apilar a y a'])
 
                       if listaEstado[i] == "b":    #5 b,#/#b ->apila b
                           xFlecha=154
@@ -180,12 +188,16 @@ class Obtener():
                           #apila
                           xapi=574
                           yapi=72
+                          speak=check_output(['espeak','quita de la pila vacio'])
+                          speak=check_output(['espeak','apilar vacio y b'])
                       if listaEstado[i] == "a":    #6 a,#/#a ->apila a
                           xFlecha=154
                           yFlecha=280
                           #apila
                           xapi=574
                           yapi=72
+                          speak=check_output(['espeak','quita de la pila vacio'])
+                          speak=check_output(['espeak','apilar vacio y a'])
 
                       if listaEstado[i] == "g":    #7 b,b/landa desapila b
                           xFlecha=298
@@ -193,6 +205,8 @@ class Obtener():
                           #desapi
                           xdesa=724
                           ydesa=276
+                          speak=check_output(['espeak','quita de la pila b'])
+                          speak=check_output(['espeak','apilar b'])
 
                       if listaEstado[i] == "h":    #8  a,a/landa desapila a
                           xFlecha=303
@@ -200,6 +214,7 @@ class Obtener():
                           #desapi
                           xdesa=724
                           ydesa=276
+                          speak=check_output(['espeak','quita de la pila a'])
 
                       if listaEstado[i] == "i":   #9 b,b/landa desapila b
                           xFlecha=576
@@ -207,6 +222,7 @@ class Obtener():
                           #desapi
                           xdesa=724
                           ydesa=276
+                          speak=check_output(['espeak','quita de la pila b'])
 
 
                       if listaEstado[i] == "j":   #10 a,a/landa desapila a
@@ -215,6 +231,7 @@ class Obtener():
                           #desapi
                           xdesa=724
                           ydesa=276
+                          speak=check_output(['espeak','quita de la pila a'])
 
                       if listaEstado[i] == "True":     #11 landa/#/# final del
                           xFlecha=571
@@ -222,6 +239,7 @@ class Obtener():
                           #desapi
                           xdesa=724
                           ydesa=276
+                          speak=check_output(['espeak','quita de la pila vacio'])
 
                       if listaEstado[i] == "True":    #4
                           yTrue=129
@@ -263,6 +281,7 @@ class Obtener():
               #print (' Esta palabra es impar y no es aceptada' )
               p=Automata.Pila()
               p.apilar("#")
+              speak=check_output(['espeak','apilar vacio'])
               guardar=Lista.Listas()
               guardar.addPila("#")
               #print("pila grajdklm",guardar.mostrarPila())
@@ -394,6 +413,8 @@ class Obtener():
                           #apila
                           xapi=574
                           yapi=72
+                          speak=check_output(['espeak','quita de la pila b'])
+                          speak=check_output(['espeak','apilar b y b'])
 
 
                       if listaEstado[i] == "e":    #2 a,b/ba -> desaapila b apila ba
@@ -405,6 +426,8 @@ class Obtener():
                           #apila
                           xapi=574
                           yapi=72
+                          speak=check_output(['espeak','quita de la pila b'])
+                          speak=check_output(['espeak','apilar b y a'])
 
                       if listaEstado[i] == "d":    #3 b,a/ab ->desaapila a apila ab
                           xFlecha=154
@@ -415,6 +438,8 @@ class Obtener():
                           #apila
                           xapi=574
                           yapi=72
+                          speak=check_output(['espeak','quita de la pila a'])
+                          speak=check_output(['espeak','apilar a y b'])
                       if listaEstado[i] == "c":    #4 a,a/aa ->desapila a y apila aa
                           xFlecha=154
                           yFlecha=211
@@ -424,6 +449,8 @@ class Obtener():
                           #apila
                           xapi=574
                           yapi=72
+                          speak=check_output(['espeak','quita de la pila a'])
+                          speak=check_output(['espeak','apilar a y a'])
 
                       if listaEstado[i] == "b":    #5 b,#/#b ->apila b
                           xFlecha=154
@@ -431,28 +458,38 @@ class Obtener():
                           #apila
                           xapi=574
                           yapi=72
+                          speak=check_output(['espeak','quita de la pila vacio'])
+                          speak=check_output(['espeak','apilar vacio y b'])
                       if listaEstado[i] == "a":    #6 a,#/#a ->apila a
                           xFlecha=154
                           yFlecha=280
                           #apila
                           xapi=574
                           yapi=72
+                          speak=check_output(['espeak','quita de la pila vacio'])
+                          speak=check_output(['espeak','apilar vacio y a'])
 
                       if listaEstado[i] == "g":    #7 c,#/#
                           xFlecha=308
                           yFlecha=329
+                          speak=check_output(['espeak','quita de la pila vacio'])
                       if listaEstado[i] == "h":    #8  c,b/b -> apila b
                           xFlecha=308
                           yFlecha=368
+                          speak=check_output(['espeak','quita de la pila b'])
+                          speak=check_output(['espeak','apilar b '])
                       if listaEstado[i] == "i":    #9  c,a/a -> apila a
                           xFlecha=308
                           yFlecha=415
+                          speak=check_output(['espeak','quita de la pila a'])
+                          speak=check_output(['espeak','apilar a'])
                       if listaEstado[i] == "j":   #10 b,b/landa -> desapila b
                           xFlecha=570
                           yFlecha=285
                           #desapi
                           xdesa=724
                           ydesa=276
+                          speak=check_output(['espeak','quita de la pila b'])
 
                       if listaEstado[i] == "k":     #11 a,a/landa -> desapila a
                           xFlecha=571
@@ -460,12 +497,14 @@ class Obtener():
                           #desapi
                           xdesa=724
                           ydesa=276
+                          speak=check_output(['espeak','quita de la pila a'])
                       if listaEstado[i] == "True":     #12 landa/#/# final del
                           xFlecha=532
                           yFlecha=431
                           #desapi
                           xdesa=724
                           ydesa=276
+                          speak=check_output(['espeak','quita de la pila vacio'])
 
                       if listaEstado[i] == "True":    #4
                           xTrue=183

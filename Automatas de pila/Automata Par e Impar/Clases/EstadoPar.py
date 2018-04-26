@@ -1,3 +1,4 @@
+#from subprocess import check_output
 import Automata
 import sys
 class EstadosPar():
@@ -31,6 +32,8 @@ class EstadosPar():
                     self.pila.desapilar()
                     self.pila.apilar("#")
                     self.pila.apilar("a")
+                    #speak=check_output(['espeak','remove from the stack by vacuum'])
+                    #speak=check_output(['espeak','stack a fredy 123'])
                     self.guardar.addEstado("a")
 
                 elif self.pila.tope()=="a":
