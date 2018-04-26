@@ -1,6 +1,7 @@
 import Automata
 import Estado
 import Lista
+import os
 class Obtener():
     def __init__(self,cadena,error):
         self.cadena=cadena
@@ -32,6 +33,7 @@ class Obtener():
                   #print(self.estados)
                   print("-> Palabra Acepatada PALINDROMO!!!")
                   print("la pila",p.mostrar())
+                  os.system("pause")
               else:
                   self.estadoPila=aux.devolverPila()
                   self.estadoPila.append("False")
@@ -39,5 +41,7 @@ class Obtener():
                   self.estados=aux.devolverEstados()
                   #print(self.estados)
                   print ("-> Palabra no Aceptada, NOOOOO es PALINDROMO!!!!")
+                  os.system("pause")
           if len(self.cadena)%2!=0:
               print (' Esta palabra es impar y no es aceptada' )
+              os.system("pause")
